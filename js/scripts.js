@@ -5,9 +5,15 @@ $(window).load(function() {
 	$(".mask").delay(1000).fadeOut("slow");
 });
 
-
 $(document).ready(function(){
-	
+
+	$('.our-team .team-person img').hover( function () {
+		$(this).attr('src', $(this).attr('src').replace(/\.png/, '_alt.png') );
+},
+	function () {
+		$(this).attr('src', $(this).attr('src').replace(/\_alt.png/, '.png') );
+	});
+
 //Sticky Navigation		
     $("#navigation").sticky({topSpacing:0});
 
@@ -126,8 +132,8 @@ $(document).ready(function(){
 	
 	
 	$('.clients-slider').bxSlider({
-		pagerCustom: '#bx-pager',
-		controls:false,
+		auto: true,
+		pause: 6000
 	});
 	
 	$('.project-slider').bxSlider({
@@ -151,7 +157,7 @@ $(document).ready(function(){
 		controls: false,
 		adaptiveHeight: true, 
 		pager: false,		
-		auto:true,
+		auto:false,
 		mode:'fade',
 		pause: 3000,
 	});
@@ -307,10 +313,10 @@ $(window).load(function(){
 
   
 //Google Map					
-	var latlng = new google.maps.LatLng(45.738028,21.224535);
+	var latlng = new google.maps.LatLng(51.205169,4.408165);
 	var settings = {
-		zoom: 16,
-		center: new google.maps.LatLng(45.738028,21.224535), mapTypeId: google.maps.MapTypeId.ROADMAP,
+		zoom: 13,
+		center: new google.maps.LatLng(51.205169,4.408165), mapTypeId: google.maps.MapTypeId.ROADMAP,
 		mapTypeControl: false,
 		scrollwheel: false,
 		draggable: true,
@@ -331,9 +337,9 @@ $(window).load(function(){
 	var contentString = '<div id="content">'+
 		'<div id="siteNotice">'+
 		'</div>'+
-		'<h3 id="firstHeading" class="firstHeading">NEWAVE</h3>'+
+		'<h3 id="firstHeading" class="firstHeading">OneTouch</h3>'+
 		'<div id="bodyContent">'+
-		'<p>Here we are. Come to drink a coffee!</p>'+
+		'<p>Peter benoistraat 10 Antwerpen</p>'+
 		'</div>'+
 		'</div>';
 	var infowindow = new google.maps.InfoWindow({
@@ -343,12 +349,12 @@ $(window).load(function(){
 	var companyImage = new google.maps.MarkerImage('images/marker.png',
 		new google.maps.Size(58,63),<!-- Width and height of the marker -->
 		new google.maps.Point(0,0),
-		new google.maps.Point(35,20)<!-- Position of the marker -->
+		new google.maps.Point(35,20)
 	);
 	
 	
 	
-	var companyPos = new google.maps.LatLng(45.738028,21.224535);
+	var companyPos = new google.maps.LatLng(51.205169,4.408165);
 	
 	var companyMarker = new google.maps.Marker({
 		position: companyPos,
