@@ -5,6 +5,8 @@ $(window).load(function() {
 	$(".mask").delay(1000).fadeOut("slow");
 });
 
+
+
 $(document).ready(function(){
 
 	$('.our-team .team-person img').hover( function () {
