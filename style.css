@@ -931,7 +931,7 @@
 
 	.home-background {
 		background:url(images/custom/background_1.jpg) ;
-		min-width: 10%;
+		min-width: 100%;
 		height:100%;
 		z-index: -100;
 		position: absolute;
