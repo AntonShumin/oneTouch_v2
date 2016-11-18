@@ -10,10 +10,15 @@ $rootdir = $_SERVER['DOCUMENT_ROOT'];
 //LOACALHOST
 if (isset($_SERVER ['HTTP_HOST']) && in_array($_SERVER ['HTTP_HOST'], $whitelist)) {
 
+    //db config
     $db_host = "localhost";
     $db_naam = "salino";
     $db_gebruiker = "root";
     $db_ww = "";
+
+    //root
+    $rootdir .= "/oneTouch_v2/";
+
 
 } else {
 
